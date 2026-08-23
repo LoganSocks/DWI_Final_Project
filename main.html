@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaleoDig Interactive</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="App_Container">
+        
+        <div class="Top_Nav">
+            <button class="Nav_Btn" id="Exit_Btn">Exit</button>
+            <button class="Nav_Btn" id="Collection_Btn">Collection</button>
+        </div>
+
+        <header class="Main_Header">
+            <p>PaleoDig Interactive: Uncover the mysteries of the past by excavating the grid below.</p>
+        </header>
+
+        <aside class="Sidebar">
+            <div class="Info_Box" id="Recent_Acquisitions">
+                <p>Recent fossil acquisitions:</p>
+                <ul id="Inventory_List">
+                    <li>No fossils found yet.</li>
+                </ul>
+            </div>
+            
+            <div class="Info_Box" id="Rotating_Info">
+                <p>Prehistoric Info:</p>
+                <p id="Dynamic_Info">Currently excavating: The T-Rex</p>
+            </div>
+            
+            <div class="Info_Box" id="Recent_Find">
+                <p>Most recent find:</p>
+                <div class="Placeholder_Img" id="Latest_Fossil_Img">🖼️</div>
+            </div>
+        </aside>
+
+        <main class="Main_Content">
+            <section id="Dig_Site" class="Grid_Board"></section>
+            <button id="Restart_Btn" class="Dig_Btn">Restart Dig</button>
+        </main>
+
+        <footer class="Progress_Footer">
+            <div class="Progress_Bar_Container">
+                <div class="Progress_Bar" id="Fossil_Progress"></div>
+            </div>
+            <p>This progress bar will fill up as fossils are collected.</p>
+        </footer>
+
+        <div id="Collection_Modal" class="Modal">
+            <div class="Modal_Content">
+                <span id="Close_Modal" class="Close_Btn">&times;</span>
+                <h2>My Dinosaur Collection</h2>
+                <div id="Collection_Gallery" class="Gallery">
+                    <p>No dinosaurs collected yet.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

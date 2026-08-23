@@ -1,0 +1,320 @@
+
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+/* styling for the body of the html */
+body {
+    /* change the font */
+    font-family: Arial, sans-serif;
+    /* change thebackground color */
+    background-color: #f0f0f0;
+    /* add padding */
+    padding: 20px;
+    /* change the text color */
+    color: #333;
+}
+/* structure for the main page */
+.App_Container {
+    /* set it to grid */
+    display: grid;
+    /* adjust the columns and rows in the grid */
+    grid-template-columns: 200px 1fr; 
+    grid-template-rows: auto 1fr auto; 
+    /* add a gap in betwene the rows and columns */
+    gap: 20px;
+    /* set a minimum height */
+    min-height: 90vh;
+}
+/* styling for the top nav */
+.Top_Nav {
+    /* set display to flex */
+    display: flex;
+    /* add gap in bewteen */
+    gap: 10px;
+}
+/* stlying for the buttons */
+.Nav_Btn {
+    /* set the background color */
+    background-color: #4a4a4a;
+    /* set the text color */
+    color: white;
+    /* no border */
+    border: none;
+    /* add padding */
+    padding: 10px 0;
+    /* round the edges */
+    border-radius: 4px;
+    /* make the cursor a pointer */
+    cursor: pointer;
+    /* makes the buttons equal size */
+    flex: 1; 
+}
+/* styling for the main header */
+.Main_Header {
+    /* add a colored border */
+    border: 1px solid #333;
+    /* add padding */
+    padding: 10px;
+    /* make the background white */
+    background-color: white;
+    /* set display to flex */
+    display: flex;
+    /* align the header to the center */
+    align-items: center;
+}
+/* styling for the sidebar */
+.Sidebar {
+    /* set display to flex */
+    display: flex;
+    /* set the flex direction to column */
+    flex-direction: column;
+    /* add a gap */
+    gap: 20px;
+}
+/* styling for the info box */
+.Info_Box {
+    /* adsd a colored border */
+    border: 1px solid #333;
+    /* add padding */
+    padding: 10px;
+    /* make the background white */
+    background-color: white;
+    /* change the minimum height */
+    min-height: 120px;
+    /* change the font size */
+    font-size: 14px;
+}
+/* styling for hte olaceholder images */
+.Placeholder_Img {
+    /* change the backgroud to white */
+    background-color: #d3d3d3;
+    /* adjust the height */
+    height: 80px;
+    /* set display to flex */
+    display: flex;
+    /* align them to the center */
+    align-items: center;
+    /* make them stay in the center */
+    justify-content: center;
+    /* change the font size */
+    font-size: 32px;
+    /* add margin to the top */
+    margin-top: 10px;
+}
+
+/* styling for the main content*/
+.Main_Content {
+    /* make the background a sandy color */
+    background-color: #eaddcf; 
+    /* make the color cover the entire area */
+    background-size: cover;
+    /* center it */
+    background-position: center;
+    /* make teh display flex */
+    display: flex;
+    /* set the direction to horizontal */
+    flex-direction: column;
+    /* align everythnig to the center */
+    align-items: center;
+    /* make it stay in the center */
+    justify-content: center;
+    /* add oadding */
+    padding: 40px;
+    /* round the edges */
+    border-radius: 4px;
+    /* add border to match sidebar */
+    border: 1px solid #333; 
+}
+/* this will make the grid that the users excavate */
+.Grid_Board {
+    /* set display to grid */
+    display: grid;
+    /* set the grid to 10 by 10  */
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    /* add a 2 pixel gap between each square */
+    gap: 2px;
+    /* change the background color */
+    background-color: #333;
+    /* add padding */
+    padding: 10px;
+    /* rounf the edges */
+    border-radius: 8px;
+    /* add margin to the bottom */
+    margin-bottom: 20px;
+}
+/* styling for the dirt oin the grid */
+.Dirt_Patch {
+    /* change the background color */
+    background-color: #8b5a2b; 
+    /* make the cursor a pointer when hovering */
+    cursor: pointer;
+    /* change the display to flex */
+    display: flex;
+    /* center everything */
+    align-items: center;
+    /* make sure it stays on the center */
+    justify-content: center;
+    /* change the font size */
+    font-size: 24px;
+    /* round the edges */
+    border-radius: 4px;
+}
+/* styling for when hovering a square */
+.Dirt_Patch:hover {
+    /* change the color when hovering */
+    background-color: #a0522d;
+}
+/* styling for when a square was selected */
+.Excavated {
+    /* change the background color */
+    background-color: #d2b48c; 
+    /* put the cursor back to normal */
+    cursor: default;
+}
+/* style for the dig button */
+.Dig_Btn {
+    /* change the background color */
+    background-color: #4a4a4a;
+    /* change the text color */
+    color: white;
+    /* add padding */
+    padding: 10px 40px;
+    /* no border */
+    border: none;
+    /* round the edges */
+    border-radius: 4px;
+    /* change the cursor */
+    cursor: pointer;
+    /* change the font size */
+    font-size: 16px;
+}
+/* Styling for the footer where the prgress bar will be */
+.Progress_Footer {
+    /* goes from the first to the last grid square */
+    grid-column: 1 / -1; 
+    /* set display to flex */
+    display: flex;
+    /* change the direction column */
+    flex-direction: column;
+    /* add a gap between the bar and the edges */
+    gap: 5px;
+    /* align it to the center */
+    text-align: center;
+    /* change the font size */
+    font-size: 14px;
+}
+/* styling for the progress bar container */
+.Progress_Bar_Container {
+    /* make the border black */
+    border: 1px solid #333;
+    /* change the height */
+    height: 25px;
+    /* adjust the width */
+    width: 100%;
+    /* change the background color */
+    background-color: white;
+}
+/* styling for the progress bar */
+.Progress_Bar {
+    /* make it fill the whole are height wise */
+    height: 100%;
+    /* no width yet */
+    width: 0%; 
+    /* change the backgorund color */
+    background-color: #4a4a4a;
+    /* every time a fossil is found increase the progress bar */
+    transition: width 0.3s ease;
+}
+
+/* Mstyling for the collection */
+.Modal {
+    /* no display */
+    display: none;
+     /*dont let it move  */
+    position: fixed; 
+    /* set its position */
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    /* adjust the width and height */
+    width: 100%; 
+    height: 100%; 
+    /* change the background color */
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+/* styling when the collection is shown */
+.Modal.show {
+    /* set display to flex */
+    display: flex;
+    /* align the items to the center */
+    align-items: center;
+    /* make them stay in the center */
+    justify-content: center;
+}
+/* styling for what the user will see in their collection */
+.Modal_Content {
+    /* change the background color */
+    background-color: #f0f0f0;
+    /* add padding */
+    padding: 20px;
+    /* add a black border */
+    border: 2px solid #333;
+    /* change the width */
+    width: 80%;
+    /* set the max width */
+    max-width: 600px;
+    /* round the edges */
+    border-radius: 8px;
+    /* make the text stay in the center */
+    text-align: center;
+    /* the closebutton will move with the box */
+    position: relative;
+}
+/* styling for the close button */
+.Close_Btn {
+    /* dont let this move */
+    position: absolute;
+    /* move it away from the top and right edge */
+    top: 10px;
+    right: 20px;
+    /* change the text color */
+    color: #333;
+    /* change the font size */
+    font-size: 28px;
+    /* make it bold */
+    font-weight: bold;
+    /* change the cursor to a pointer */
+    cursor: pointer;
+}
+/* styling for when hovering the close button */
+.Close_Btn:hover {
+    /* change the color when hovering */
+    color: #a0522d;
+}
+/* styling for where the images sit in the collection */
+.Gallery {
+    /* set the display to flex */
+    display: flex;
+    /* if they run out of room teh pictures can drop to a new line */
+    flex-wrap: wrap;
+    /* add a gap between each image */
+    gap: 20px;
+    /* make sure its in the center */
+    justify-content: center;
+    /* add margin to the top */
+    margin-top: 20px;
+}
+/* styling for the images */
+.Gallery img {
+    /* set the max width */
+    max-width: 200px;
+    /* make theborders brown */
+    border: 4px solid #5c4033;
+    /* round the edges */
+    border-radius: 4px;
+    /* change the background color */
+    background-color: white;
+}
